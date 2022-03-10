@@ -1,0 +1,129 @@
+[
+   {
+      "Name": "Circle",
+      "Center": [
+         852,
+         200
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": true,
+      "Name": "Ketchup",
+      "Angle": 0.4145068226504428,
+      "Ketchup_string": "Ketchup\n",
+      "Center": [
+         963,
+         295
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": true,
+      "Name": "Ketchup",
+      "Angle": 0.02255254766938405,
+      "Ketchup_string": "Ketchup\n",
+      "Center": [
+         297,
+         281
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": true,
+      "Name": "Ketchup",
+      "Angle": -0.769356691730082,
+      "Ketchup_string": "Ketchup\n",
+      "Center": [
+         680,
+         366
+      ]
+   },
+   {
+      "Name": "Circle",
+      "Center": [
+         547,
+         427
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": true,
+      "Name": "Ketchup",
+      "Angle": -0.5506756678567157,
+      "Ketchup_string": "Ketchup\n",
+      "Center": [
+         308,
+         557
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": true,
+      "Name": "Ketchup",
+      "Angle": -0.9661978400925894,
+      "Ketchup_string": "Ketchup\n",
+      "Center": [
+         1080,
+         583
+      ]
+   },
+   {
+      "Name": "Barcode",
+      "Center": [
+         706,
+         611
+      ],
+      "Angle": -0.0
+   },
+   {
+      "Name": "Circle",
+      "Center": [
+         165,
+         599
+      ]
+   },
+   {
+      "Name": "Circle",
+      "Center": [
+         962,
+         674
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": true,
+      "Name": "Ketchup",
+      "Angle": 0.5776294599161735,
+      "Ketchup_string": "Ketchup\n",
+      "Center": [
+         720,
+         697
+      ]
+   },
+   {
+      "Name": "Circle",
+      "Center": [
+         281,
+         747
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": true,
+      "Name": "Ketchup",
+      "Angle": -0.16638631647571284,
+      "Ketchup_string": "Ketchup\n",
+      "Center": [
+         427,
+         773
+      ]
+   }
+]

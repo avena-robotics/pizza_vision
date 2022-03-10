@@ -1,0 +1,168 @@
+[
+   {
+      "Name": "Circle",
+      "Center": [
+         437,
+         221
+      ]
+   },
+   {
+      "Name": "Circle",
+      "Center": [
+         172,
+         297
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": false,
+      "distance_to_add": 12.010412149464313,
+      "Name": "Ketchup",
+      "Angle": -0.336674893726594,
+      "Ketchup_string": "Ketchu\n",
+      "Center": [
+         309,
+         301
+      ]
+   },
+   {
+      "Name": "Circle",
+      "Center": [
+         932,
+         309
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": false,
+      "distance_to_add": 29.50423698386386,
+      "Name": "Ketchup",
+      "Angle": -0.41241051664060974,
+      "Ketchup_string": "Ketc/\n",
+      "Center": [
+         1043,
+         314
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": false,
+      "distance_to_add": 7.516648189186454,
+      "Name": "Ketchup",
+      "Angle": 1.305856495614291,
+      "Ketchup_string": "Ketchu;\n",
+      "Center": [
+         434,
+         363
+      ]
+   },
+   {
+      "Upside_down": true,
+      "K_visible": true,
+      "p_visible": false,
+      "distance_to_add": 14.317821063276353,
+      "Name": "Ketchup",
+      "Angle": 1.3142797601916685,
+      "Ketchup_string": "Ketchy\n",
+      "Center": [
+         978,
+         438
+      ]
+   },
+   {
+      "Name": "Circle",
+      "Center": [
+         698,
+         478
+      ]
+   },
+   {
+      "Name": "Circle",
+      "Center": [
+         511,
+         501
+      ]
+   },
+   {
+      "Name": "Circle",
+      "Center": [
+         236,
+         534
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": false,
+      "distance_to_add": 25.004999500099974,
+      "Name": "Ketchup",
+      "Angle": -0.2310906256680704,
+      "Ketchup_string": "Ketch\n",
+      "Center": [
+         819,
+         511
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": false,
+      "distance_to_add": 14.577379737113251,
+      "Name": "Ketchup",
+      "Angle": -0.2906724645473006,
+      "Ketchup_string": "Ketchu\n",
+      "Center": [
+         369,
+         553
+      ]
+   },
+   {
+      "Name": "Circle",
+      "Center": [
+         959,
+         571
+      ]
+   },
+   {
+      "Upside_down": true,
+      "K_visible": true,
+      "p_visible": false,
+      "distance_to_add": 26.076809620810597,
+      "Name": "Ketchup",
+      "Angle": 1.2753554578895288,
+      "Ketchup_string": "Ketch\n",
+      "Center": [
+         754,
+         617
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": false,
+      "distance_to_add": 31.00403199585499,
+      "Name": "Ketchup",
+      "Angle": 1.2490457247145317,
+      "Ketchup_string": "Ketc/\n",
+      "Center": [
+         481,
+         613
+      ]
+   },
+   {
+      "Upside_down": false,
+      "K_visible": true,
+      "p_visible": false,
+      "distance_to_add": 24.50510150968569,
+      "Name": "Ketchup",
+      "Angle": -0.33929259574735604,
+      "Ketchup_string": "Ketch\n",
+      "Center": [
+         594,
+         763
+      ]
+   }
+]

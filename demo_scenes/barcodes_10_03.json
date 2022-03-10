@@ -1,0 +1,96 @@
+[
+   {
+      "Name": "Barcode",
+      "Center": [
+         851,
+         217
+      ],
+      "Angle": 1.41978097770659
+   },
+   {
+      "Name": "Barcode",
+      "Center": [
+         445,
+         332
+      ],
+      "Angle": -0.903724099452886
+   },
+   {
+      "Name": "Barcode",
+      "Center": [
+         1167,
+         330
+      ],
+      "Angle": 0.028161549713104726
+   },
+   {
+      "Name": "Barcode",
+      "Center": [
+         555,
+         408
+      ],
+      "Angle": 0.47569520743581484
+   },
+   {
+      "Name": "Barcode",
+      "Center": [
+         993,
+         543
+      ],
+      "Angle": -0.9029637571287423
+   },
+   {
+      "Name": "Barcode",
+      "Center": [
+         612,
+         571
+      ],
+      "Angle": -1.5273454817861014
+   },
+   {
+      "Name": "Barcode",
+      "Center": [
+         953,
+         699
+      ],
+      "Angle": -0.9528298971041332
+   },
+   {
+      "Name": "Backside String",
+      "Center": [
+         451,
+         687
+      ]
+   },
+   {
+      "Name": "Barcode",
+      "Center": [
+         303,
+         738
+      ],
+      "Angle": -0.5191460885706756
+   },
+   {
+      "Name": "Backside String",
+      "Center": [
+         1029,
+         737
+      ]
+   },
+   {
+      "Name": "Barcode",
+      "Center": [
+         498,
+         753
+      ],
+      "Angle": -0.5070984790884779
+   },
+   {
+      "Name": "Barcode",
+      "Center": [
+         897,
+         854
+      ],
+      "Angle": -1.438913229642217
+   }
+]
