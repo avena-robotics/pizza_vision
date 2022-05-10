@@ -10,7 +10,7 @@ from utils import build_intel_handle, calculate_rotation, compare_string, distan
 
 if __name__ == '__main__':
     # Serial number of Intel camera
-    serial = "121622061205"
+    serial = "037522060116"
     # Get intel camera handle
     intel_handle = build_intel_handle(serial)
 

@@ -28,7 +28,7 @@ class ModbusServer:
     def __init__(self):
         self.s = Serial(
             # adres
-            port=os.path.expanduser('~')+'/dev/vcomslave',
+            port=os.path.expanduser('~')+'/dev/vision_slave',
             baudrate=115200,
             bytesize=serialutil.EIGHTBITS,
             parity=serialutil.PARITY_NONE,
@@ -39,7 +39,7 @@ class ModbusServer:
         self.data_store = defaultdict(int)
 
         # Tworze sobie rejestr na dane
-        self.data_register = []
+        self.data_register = [defaultdict(int)]
 
         self.app = get_server(RTUServer, self.s)
         self.flags = Flags()
@@ -82,3 +82,5 @@ class ModbusServer:
 
 if __name__ == '__main__':
     ms = ModbusServer()
+    while True:
+        time.sleep(1)
