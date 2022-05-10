@@ -28,7 +28,7 @@ class ModbusServer:
     def __init__(self):
         self.s = Serial(
             # adres
-            port=os.path.expanduser('~')+'/dev/vcomslave',
+            port=os.path.expanduser('~')+'/dev/vision_slave',
             baudrate=115200,
             bytesize=serialutil.EIGHTBITS,
             parity=serialutil.PARITY_NONE,
@@ -39,7 +39,7 @@ class ModbusServer:
         self.data_store = defaultdict(int)
 
         # Tworze sobie rejestr na dane
-        self.data_register = []
+        self.data_register = [0] * 12
 
         self.app = get_server(RTUServer, self.s)
         self.flags = Flags()
@@ -50,21 +50,31 @@ class ModbusServer:
 
         @self.app.route(slave_ids=[1], function_codes=[3],
                         addresses=list(range(MB_START_DATA_VISIONSYSTEM, MB_END_DATA_VISIONSYSTEM + 1)))
-        def read_data_store(slave_id, function_code, address):
+        def read_position(slave_id, function_code, address):
             """" Return value of address. """
-            # print(f'[read_data_store]: Telemetry. Address: {address}')
+            # print(address)
             if address == MB_START_DATA_VISIONSYSTEM:
                 self.data_mtx.acquire()
             elif address == MB_END_DATA_VISIONSYSTEM:
                 self.data_mtx.release()
-            return self.data_register[0][address]
+            return self.data_register[address-1]
 
-        @self.app.route(slave_ids=[1], function_codes=[16], addresses=list(range(MB_START_VISION_FLAGS, MB_END_VISION_FLAGS + 1)))
-        def set_flags(slave_id, function_code, address, value):
-            """" Set control words. """
-            # print(f'[write_control_words]: Address: {address}, value: {value}')
-            # TODO: Poprawić to
-            self.flags.call_function = True
+        @self.app.route(slave_ids=[1], function_codes=[5], addresses=[13])
+        def set_trigger(slave_id, function_code, address, value):
+            if value:
+                self.flags.call_function = True
+            return 0
+
+        @self.app.route(slave_ids=[1], function_codes=[3], addresses=[14])
+        def dupa(slave_id, function_code, address):
+            buf = 0
+            if self.flags.send_data:
+                buf = 1
+                self.flags.send_data = False
+            return buf
+        
+        
+
 
     def handle_request_threaded(self):
         while True:
@@ -82,3 +92,5 @@ class ModbusServer:
 
 if __name__ == '__main__':
     ms = ModbusServer()
+    while True:
+        time.sleep(1)
