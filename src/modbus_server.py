@@ -41,6 +41,8 @@ class ModbusServer:
         # Tworze sobie rejestr na dane
         self.data_register = [0] * 12
 
+        
+
         self.app = get_server(RTUServer, self.s)
         self.flags = Flags()
 
