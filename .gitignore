@@ -1,3 +1,5 @@
 output/
 ketchup
 vision_system
+src/__*
+src/.*

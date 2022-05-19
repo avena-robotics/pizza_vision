@@ -16,9 +16,9 @@ if __name__ == '__main__':
 
     # DEFINE HELPERS OBJECTS AND CONSTANTS
     # Image ROI boundaries
-    lower_y = 80
-    lower_x = 390
-    upper_x = 1800
+    lower_y = 30
+    lower_x = 240
+    upper_x = 1850
     # Dilation kernel for reflections mask
     disk = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (3, 3))
     # Dilation kernel for thresholded image
@@ -40,6 +40,11 @@ if __name__ == '__main__':
     shape1_full_ketchup_mid = 83
     v1 = [shape0_full_ketchup_mid, shape1_full_ketchup_mid]
 
+    pts1 = np.float32([[140, 5], [1900, 10], [335, 1057], [1675, 1060]])
+    pts2 = np.float32([[0, 0], [1410, 10], [0, 1000], [1410, 1000]])
+
+    M = cv2.getPerspectiveTransform(pts1, pts2)
+
     # Infinite loop to analyze images
     while True:
         # Measure the time
@@ -51,7 +56,11 @@ if __name__ == '__main__':
         # Convert color frame to numpy (opencv)
         img = np.asanyarray(color_frame.get_data())
         # Crop ROI
-        img = img[lower_y:, lower_x:upper_x]
+
+        # img = img[lower_y:, lower_x:upper_x]
+        img = cv2.warpPerspective(img, M, (1410, 1000))
+
+      
         # Convert to grayscale
         img_grayscale = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         # Get specularity mask
@@ -251,8 +260,8 @@ if __name__ == '__main__':
         name = input("Name for JSON. If dont want to save press ENTER")
         if name:
             print("Saving data JSON...")
-            with open("/home/avena/PycharmProjects/ketchup_binpicking/output/" + name + '.json', 'w') as f:
+            with open("/home/avena/software/pizza_vision/output/" + name + '.json', 'w') as f:
                 json.dump(list_of_items, f, indent=3)
             print("Saving photo for this JSON...")
-            cv2.imwrite("/home/avena/PycharmProjects/ketchup_binpicking/output/" + name + '.png', img)
+            cv2.imwrite("/home/avena/software/pizza_vision/output/" + name + '.png', img)
             input("Data saved! Press ENTER to continue!")

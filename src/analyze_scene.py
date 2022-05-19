@@ -25,11 +25,11 @@ def click_event(event, x, y, _, __):
 
 
 # Read scene data
-with open(r"C:\Users\Robo\Desktop\software\pizza_vision\demo_scenes\fat_scene_10_03.json", "r") as f:
+with open("/home/avena/software/pizza_vision/output/ciemna_scena.json", "r") as f:
     data = json.load(f)
 
 # Read scene image
-img = cv2.imread(r"C:\Users\Robo\Desktop\software\pizza_vision\demo_scenes\fat_scene_10_03.png")
+img = cv2.imread("/home/avena/software/pizza_vision/output/ciemna_scena.png")
 
 
 # Different colors for different objects for drawing purposes

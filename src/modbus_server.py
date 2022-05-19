@@ -1,3 +1,4 @@
+from curses import baudrate
 import os
 import threading
 import struct
@@ -28,8 +29,10 @@ class ModbusServer:
     def __init__(self):
         self.s = Serial(
             # adres
-            port=os.path.expanduser('~')+'/dev/vision_slave',
+            # port=os.path.expanduser('~')+'/dev/vision_slave',
+            port="/dev/ttyUSB0",
             baudrate=115200,
+            # baudrate=9600,
             bytesize=serialutil.EIGHTBITS,
             parity=serialutil.PARITY_NONE,
             stopbits=serialutil.STOPBITS_ONE,
@@ -95,4 +98,4 @@ class ModbusServer:
 if __name__ == '__main__':
     ms = ModbusServer()
     while True:
-        time.sleep(1)
+        time.sleep(0.1)
