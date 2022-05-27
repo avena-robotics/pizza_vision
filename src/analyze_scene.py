@@ -1,9 +1,15 @@
 import json
 import numpy as np
 import cv2
+import argparse
 
 
 from utils import distance_2d
+
+parser = argparse.ArgumentParser()
+parser.add_argument("path", type=str)
+args = parser.parse_args()
+
 
 # Globals for helper
 global x_first, y_first, x_second, y_second
@@ -25,11 +31,11 @@ def click_event(event, x, y, _, __):
 
 
 # Read scene data
-with open("/home/avena/software/pizza_vision/output/ciemna_scena.json", "r") as f:
+with open(args.path + ".json", "r") as f:
     data = json.load(f)
 
 # Read scene image
-img = cv2.imread("/home/avena/software/pizza_vision/output/ciemna_scena.png")
+img = cv2.imread(args.path + ".png")
 
 
 # Different colors for different objects for drawing purposes
