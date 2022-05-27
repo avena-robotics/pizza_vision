@@ -1,14 +1,20 @@
+from email import parser
 import cv2
 import imutils
 import json
 import numpy as np
 import pytesseract
 import time
+import argparse
 
 from utils import build_intel_handle, calculate_rotation, compare_string, distance_2d
 
 
 if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("path", type=str)
+    args = parser.parse_args()
     # Serial number of Intel camera
     serial = "037522060116"
     # Get intel camera handle
@@ -260,8 +266,8 @@ if __name__ == '__main__':
         name = input("Name for JSON. If dont want to save press ENTER")
         if name:
             print("Saving data JSON...")
-            with open("/home/avena/software/pizza_vision/output/" + name + '.json', 'w') as f:
+            with open(args.path + name + '.json', 'w') as f:
                 json.dump(list_of_items, f, indent=3)
             print("Saving photo for this JSON...")
-            cv2.imwrite("/home/avena/software/pizza_vision/output/" + name + '.png', img)
+            cv2.imwrite(args.path + name + '.png', img)
             input("Data saved! Press ENTER to continue!")
